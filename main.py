@@ -1,9 +1,10 @@
-#External Librarys
+#External/Internal/Builtin Librarys
 import subprocess, threading, os
 
-#Internal Librarys
+#Function/Classes
 from storage.utils import clear, close
 from storage.exception import CustomError
+from storage.tui.textuserinterface import TuiMAIN
 
 class Pomegranate:
 	@staticmethod
@@ -24,5 +25,6 @@ if __name__ == '__main__':
 	p0m = Pomegranate()
 	while True:
 		clear("P0megranate")
+		TuiMAIN()
 		console_thread = threading.Thread(target=Pomegranate.console()).start()
 		p0m.main()

@@ -1,7 +1,7 @@
 #External/Internal/Builtin Librarys
 import os
 
-#Functions
+#Function/Classes
 from consoles.console_data import command_data
 from storage.utils import close, clear
 

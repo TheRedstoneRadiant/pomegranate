@@ -1,3 +1,4 @@
+#Function/Classes
 from consoles.console_class import Console
 
 command_data = {
