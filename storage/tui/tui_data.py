@@ -12,5 +12,8 @@ main_title = """
 """
 
 features = {
-    "Exit": TuiTOOLS.exit
+    "Sign Up": TuiTOOLS.SignUp,
+    "Login": TuiTOOLS.Login,
+    "Exit": TuiTOOLS.Exit, 
+
 }

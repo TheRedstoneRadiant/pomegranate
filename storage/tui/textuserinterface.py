@@ -1,5 +1,7 @@
 #External/Internal/Builtin Librarys
 import curses
+import webbrowser
+from storage.tui.tui_tools import TuiTOOLS
 
 #Function/Classes
 from storage.tui.tui_data import main_title, features
@@ -7,7 +9,10 @@ from storage.tui.tui_data import main_title, features
 class TuiMAIN:
     def __init__(self):
         self.menu_args = ["Sign Up", "Login", "Exit"]
-        self.ascii_art = main_title
+        self.sign_up_args = ["Username: ", "Password: ", "Confirm Password: "]
+        self.login_args = ["Username: ", "Password: ", "", "Forgot Password?"]
+        self.main_ascii_art = main_title
+        #self.sign_ip_ascii_art = signup_title
         curses.wrapper(self.main)
 
     def tui_mainmenu_show(self, stdscr, selected_row_idx):
@@ -28,8 +33,7 @@ class TuiMAIN:
         # now show ascii at top
         stdscr.refresh()
 
-    def sign_up_menu_show(self, stdscr, selected_row_idx):
-        pass
+
 
     def main(self, stdscr):
         curses.curs_set(0)  # invis cursor
@@ -45,10 +49,11 @@ class TuiMAIN:
                 self.current_row_idx +=1
 
             elif self.key == curses.KEY_ENTER or self.key in [10, 13]:
+                print(features[self.menu_args[self.current_row_idx]])
+                stdscr.getch() # is getch in the right place?
                 features[self.menu_args[self.current_row_idx]]()
-                stdscr.getch()
-                if self.current_row_idx == len(self.menu_args) - 1:
-                    break
             self.tui_mainmenu_show(stdscr, self.current_row_idx)
 
             stdscr.refresh()
+
+            # addsrt(20,20, "Title")
