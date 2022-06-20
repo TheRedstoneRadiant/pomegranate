@@ -1,4 +1,4 @@
-#Function/Classes
+# Function/Classes
 from storage.tui.tui_tools import TuiTOOLS
 
 main_title = """
@@ -14,6 +14,5 @@ main_title = """
 features = {
     "Sign Up": TuiTOOLS.SignUp,
     "Login": TuiTOOLS.Login,
-    "Exit": TuiTOOLS.Exit, 
-
+    "Exit": TuiTOOLS.Exit,
 }

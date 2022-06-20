@@ -1,10 +1,12 @@
-#External/Internal/Builtin Librarys
+# External/Internal/Builtin Librarys
 import os
 
+
 class Console:
-	@staticmethod
-	def info():
-		print("""
+    @staticmethod
+    def info():
+        print(
+            """
 -----
 <'cd'> -> [ARGVs: 1] -id/username		Switches to specified DM
 <'ls'> -> [ARGVs: 0] 				List all DMs
@@ -14,8 +16,9 @@ class Console:
 <'mkdir'> -> [ARGVs: 1]	-id/username		Add a friend
 <'clear'> -> [ARGVs: 0]				Clear Console
 -----
-			""")
+			"""
+        )
 
-	def clear() -> None:
-		"""Clear Console"""
-		os.system("cls") if os.name == "nt" else os.system("clear")
+    def clear() -> None:
+        """Clear Console"""
+        os.system("cls") if os.name == "nt" else os.system("clear")
