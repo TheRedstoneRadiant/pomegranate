@@ -12,10 +12,9 @@ class TuiTOOLS:
         curses.endwin()
         close(1)
 
-    @staticmethod
+    
     def SignUp():
         webbrowser.open("google.com")
 
-    @staticmethod
     def Login():
         webbrowser.open("duckduckgo.com")
